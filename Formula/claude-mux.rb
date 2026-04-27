@@ -14,12 +14,11 @@ class ClaudeMux < Formula
 
   def caveats
     <<~EOS
-      Run the installer for LaunchAgent and config setup:
-        claude-mux-setup
+      Config (~/.claude-mux/config) is created automatically on first run.
 
-      Or configure manually:
-        mkdir -p ~/.claude-mux/templates
-        cp #{opt_prefix}/config.example ~/.claude-mux/config
+      For LaunchAgent setup (home session at login):
+        git clone https://github.com/pereljon/claude-mux.git
+        cd claude-mux && ./install.sh
 
       Documentation: https://github.com/pereljon/claude-mux#readme
     EOS
