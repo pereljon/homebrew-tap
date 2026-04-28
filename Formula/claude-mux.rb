@@ -1,8 +1,8 @@
 class ClaudeMux < Formula
   desc "Persistent Claude Code sessions in tmux with Remote Control"
   homepage "https://github.com/pereljon/claude-mux"
-  url "https://github.com/pereljon/claude-mux/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "2c9608b0461470c5b4a2d67eeb27cbd832d23cc7ed7a2137ecc092cd36b63a23"
+  url "https://github.com/pereljon/claude-mux/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "abd809436318e22071343d6d4510c5fbd93a69b7ff6983b197570452b674b919"
   license "MIT"
   head "https://github.com/pereljon/claude-mux.git", branch: "main"
 
@@ -14,11 +14,10 @@ class ClaudeMux < Formula
 
   def caveats
     <<~EOS
-      Config (~/.claude-mux/config) is created automatically on first run.
+      Run setup to create ~/.claude-mux/config and optionally install a
+      LaunchAgent (home session at login):
 
-      For LaunchAgent setup (home session at login):
-        git clone https://github.com/pereljon/claude-mux.git
-        cd claude-mux && ./install.sh
+        claude-mux --install
 
       Documentation: https://github.com/pereljon/claude-mux#readme
     EOS
