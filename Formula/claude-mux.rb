@@ -12,6 +12,14 @@ class ClaudeMux < Formula
     bin.install "claude-mux"
   end
 
+  def post_install
+    old_bin = Pathname.new(ENV["HOME"]) / "bin/claude-mux"
+    if old_bin.exist?
+      old_bin.unlink
+      opoo "Removed old manually-installed #{old_bin} — Homebrew version is now in PATH."
+    end
+  end
+
   def caveats
     <<~EOS
       Run setup to create ~/.claude-mux/config and optionally install a
