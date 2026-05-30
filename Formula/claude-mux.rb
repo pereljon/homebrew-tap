@@ -1,8 +1,8 @@
 class ClaudeMux < Formula
   desc "Persistent Claude Code sessions in tmux with Remote Control"
   homepage "https://github.com/pereljon/claude-mux"
-  url "https://github.com/pereljon/claude-mux/archive/refs/tags/v1.13.1.tar.gz"
-  sha256 "4a3b1b7e74c217453dd229b0e252b8e4025c6295730b5a245697388191572c41"
+  url "https://github.com/pereljon/claude-mux/archive/refs/tags/v1.13.2.tar.gz"
+  sha256 "665ca7162ef795fcd9433b72790eebdae8dfd6c422f7346420fa6dff496465aa"
   license "MIT"
   head "https://github.com/pereljon/claude-mux.git", branch: "main"
 
